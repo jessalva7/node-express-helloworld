@@ -1,0 +1,25 @@
+{
+  "name": "node-express-helloworld",
+  "version": "1.0.0",
+  "description": "a hello world to learn express",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "jessal",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jessalva7/node-express-helloworld.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jessalva7/node-express-helloworld/issues"
+  },
+  "homepage": "https://github.com/jessalva7/node-express-helloworld#readme"
+}
