@@ -4,14 +4,18 @@
   "description": "a hello world to learn express",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon app",
+    "start": "nodemon src/app",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "jessal",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "morgan": "^1.10.0",
+    "pg": "^8.4.2",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^6.3.5"
   },
   "devDependencies": {},
   "repository": {
