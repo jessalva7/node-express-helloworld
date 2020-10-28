@@ -1,10 +1,9 @@
 const fs = require('fs');
 const ErrorLogger = (err, req, res, next) => {
 
-    var logMessage = `${new Date().toISOString()}-${req.method}-${req.url}\n`
-
     if (err) {
-        fs.appendFile(__dirname + 'ErrorLogger.txt', logMessage, (err) => {
+        let logMessage = `${new Date().toISOString()}-${req.url}-${err.status}-${err.message}\n`
+        fs.appendFile( './resources/ErrorLogger.txt', logMessage, (err) => {
             if (err) {
                 console.log("Not able to log error message")
             }

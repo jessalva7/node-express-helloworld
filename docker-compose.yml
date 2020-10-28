@@ -1,0 +1,19 @@
+version: '3.7'
+services:
+    user-service:
+        restart: always
+        ports: 
+            - 3000:3000
+        build: 
+            dockerfile: Dockerfile
+            context: .
+        links:
+            - postgres
+    postgres:
+        image: postgres:latest
+        ports: 
+            - 5432:5432
+        environment: 
+            - POSTGRES_PASSWORD=password 
+            - POSTGRES_USER=postgres
+            - POSTGRES_DB=pgDB

@@ -1,0 +1,5 @@
+2020-10-28T15:54:47.425Z-/user/add-user-undefined-invalid input syntax for type time: "2020-10-28T21:24:47.403+05:30"
+2020-10-28T15:56:23.962Z-/user/add-user-undefined-invalid input syntax for type time: "2020-10-28T21:26:23.941+05:30"
+2020-10-28T15:56:44.640Z-/user/add-user-undefined-invalid input syntax for type time: "2020-10-28T21:26:44.638+05:30"
+2020-10-28T15:57:31.007Z-/user/add-user-undefined-null value in column "id" of relation "users" violates not-null constraint
+2020-10-28T16:04:49.863Z-/user/acae3409-4887-4f3e-8514-3cb6c79133a0-undefined-userid is not defined
