@@ -8,3 +8,7 @@ To start using nodemon
 ```
 npm start
 ```
+To start using docker compose
+```
+docker-compose up
+```
