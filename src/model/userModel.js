@@ -5,25 +5,26 @@ const dbConnection = require('../utilities/connection');
 userEntity = dbConnection.define(
     'user',
     {
+        username:{
+            type:Sequelize.STRING,
+            allowNull: false,
+            primaryKey:true
+        },
         full_name:{
             type:Sequelize.STRING,
             allowNull: false
-        },
-        created_at:{
-            type:Sequelize.DATE,
-            defaultValue: Sequelize.NOW
         },
         country_code:{
             type:Sequelize.STRING(2),
             allowNull: false
         },
         verified:{
-            type:Sequelize.BOOLEAN
+            type:Sequelize.BOOLEAN,
+            defaultValue: false
         },
-        id:{
-            type:Sequelize.UUID,
-            primaryKey:true,
-            defaultValue: Sequelize.UUIDV4
+        password:{
+            type:Sequelize.STRING,
+            allowNull:false
         }
     });
 

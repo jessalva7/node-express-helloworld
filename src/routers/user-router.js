@@ -1,40 +1,14 @@
 const express = require('express');
-const userRepository = require('../model/userModel');
+const userController = require('../service/user-controller')
+
 userRouter = express.Router();
 
+userRouter.get('/', userController.verifyToken, userController.authorizeUser,userController.getAll)
 
-userRouter.get('/', (_req,res,next) => {
+userRouter.post('/login', userController.loginUser)
 
+userRouter.post("/signup", userController.addUser)
 
-    userRepository.findAll()
-    .then( data => {
-        res.json(data) 
-    })
-    .catch( error => next(error)) 
-    
-
-})
-
-userRouter.post("/add-user", async(req,res,next) => {
-
-    userRepository.create(req.body)
-    .then( 
-        data => {
-            res.json(data)
-        }
-    ).catch(error => next(error));
-})
-
-userRouter.get('/:userid', (req,res) => {
-
-    userRepository.findByPk( req.params.userid )
-    .then( 
-        data => {
-            res.json(data)
-        }
-    ).catch(error => next(error));
-
-})
-
+userRouter.get('/:userid', userController.verifyToken, userController.authorizeUser, userController.getUser)
 
 module.exports = userRouter 
