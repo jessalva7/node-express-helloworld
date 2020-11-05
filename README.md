@@ -4,7 +4,7 @@ To install node modules
 ```
 npm install
 ```
-To start using nodemon
+To start using node
 ```
 npm start
 ```
